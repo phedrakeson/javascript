@@ -28,3 +28,74 @@ var numero = 80;
 var unidade = 'kg';
 var peso = numero + unidade; // '80kg' string
 var pesoPorDois = peso / 2; // NaN (Not a Number)
+
+// A Ordem Importa (Assim como na matemática)
+// Começa por multiplicação e divisão, depois soma e subtração
+
+var total1 = 20 + 5 * 2; // 30
+var total2 = (20 + 5) * 2; // 50
+var total3 = 20 / 2 * 5; // 50
+var total4 = 10 + 10 * 2 + 20 / 2; // 40
+// Parênteses para priorizar uma expressão
+
+// Operadores Aritméticos Unários
+
+var incremento = 5;
+console.log(incremento++) // 5
+console.log(incremento); // 6
+
+var incremento2 = 5;
+console.log(++incremento2); // 6
+console.log(incremento2); // 6
+
+// Mesma coisa para o decremento
+// --x
+
+// O + e - tenta transformar o valor seguinte em número
+
+var frase = 'Isso é uma frase';
++frase; // NaN
+-frase; // NaN
+
+var idade = '28';
++idade; // 28 (numero)
+-idade; // -28 (numero)
+console.log(+idade + 5); // 33
+
+
+var possuiFaculdade = true;
+console.log(+possuiFaculdade); // 1
+// O - antes de um número torna ele negativo
+
+// EXERCICIOS
+// Qual o resultado da seguinte expressão?
+var totalEx = 10 + 5 * 2 / 2 + 20;
+console.log(totalEx); // 35
+
+// Crie duas expressões que retornem NaN
+
+var nan1 = '128bytes';
+console.log(+nan1);
+
+var nan2 = 'Oi' - 200;
+console.log(nan2);
+
+// Somar a string '200' com o número 50 e retornar 250
+
+var x = '200';
+var y = 50;
+console.log(+x + y);
+
+// Incremente o número 5 e retorne o seu valor incrementado
+
+var increment = 5;
+console.log(increment++);
+console.log(increment);
+
+// Como dividir o peso por 2?
+var numero = +'80' / 2;
+var unidade = 'kg';
+var peso = numero + unidade; // '80kg'
+var pesoPorDois = peso; // NaN (Not a Number)
+
+console.log(pesoPorDois);
