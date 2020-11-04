@@ -37,3 +37,4 @@ btn.innerText; // 'Clique'
 btn.addEventListener('click', function(){
   console.log('Clicou')
 })
+// Praticamente todos os efeitos com JS são feitos utilizando propriedades e métodos de objetos DOM
