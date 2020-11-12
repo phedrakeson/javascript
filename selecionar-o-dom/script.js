@@ -61,6 +61,14 @@ console.log(gridSectionNode); // 3 itens
 
 // ARRAY-LIKE
 // HTMLCollection e NodeList são array-like, parecem uma array mas não são. O método de Array forEach() por exemplo, existe apenas em NodeList.
+const gridSection = document.querySelectorAll('.grid-section');
+
+gridSection.forEach(function(gridItem, index, array) {
+  gridItem.classList.add('azul');
+  console.log(index) // index do item na array
+  console.log(array) // a array completa
+});
+// É possível transformar array-like em uma Array real, utilizando o método Array.from(gridSection)
 
 
 
