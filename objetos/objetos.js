@@ -147,3 +147,105 @@ var cachorro = {
     }
   }
 }
+
+
+// Constructor Functions
+// Funções construtoras que são responsáveis por construir novos objetos sempre que chamamos a mesma
+function Carro() {
+  this.marca = 'marca';
+  this.preco = 0;
+}
+
+const honda = new Carro();
+honda.marca = 'Honda';
+honda.preco = 4000;
+const fiat = new Carro();
+fiat.marca = 'Fiat';
+fiat.preco = 3000;
+// sempre começa com letra maiúscula !
+
+// outra forma de se fazer
+
+function Cerveja(estilo, fabricante) {
+  this.estilo = estilo;
+  this.fabricante = fabricante;
+}
+
+const doubleNewEnglandIpa = new Cerveja('New England IPA', 'Roleta Russa');
+const indica = new Cerveja('English IPA', 'Colorado');
+
+// new Keyword
+// A palavra chave new é responsável por criar um novo objeto baseado na função que passamos a frente dela
+const honda = new Carro();
+
+// 1 Cria um novo objeto
+honda = {};
+
+// 2 define o protótipo
+honda.prototype = Carro.prototype;
+
+// 3 Aponta a variável this para o objeto
+this = honda;
+
+// 4 executa a função, substituindo this pelo objeto
+honda.marca = 'Marca'
+honda.preco = 0
+
+// Variáveis dentro da constructor estão "protegidas"
+function Carro2(marca, precoInicial) {
+  const taxa = 1.2;
+  const precoFinal = precoInicial * taxa;
+  this.marca = marca;
+  this.preco = precoFinal;
+  console.log(this);
+}
+
+const honda = new Carro2('Honda', 2000);
+
+
+// Exemplo REAL de um objeto:
+// forma não eficiente, não dá pra reaproveitar.
+const Dom = {
+  seletor: 'li',
+  element() {
+    return document.querySelector(this.selector);
+  },
+  ativo() {
+    this.element().classList.add('ativo')
+  },
+}
+Dom.ativo(); // adiciona ativo ao li
+Dom.selector = 'ul';
+Dom.ativo(); // adiciona ativo ao ul
+// Objeto real e constructor
+function Dom(seletor) {
+  this.element = function() {
+    return document.querySelector(seletor);
+  }
+  this.ativo = function(classe) {
+    this.element().classList.add(classe);
+  }
+}
+Dom.ativo(); // adiciona ativo ao li
+Dom.selector = 'ul';
+Dom.ativo(); // adiciona ativo ao ul
+
+const li = new Dom('li', 'ativo');
+// lembre-se sempre de usar parâmetros.
+
+function Dom(seletor) {
+  const elementList = document.querySelectorAll(seletor);
+  this.elements = elementList;
+  this.addClass = function(classe) {
+    elementList.forEach((element) => {
+      element.classList.add(classe)
+    })
+  }
+  }
+  this.removeClass = function(classe) {
+    elementList.forEach((element) => {
+      element.classList.remove(classe)
+    })
+  }
+  }
+}
