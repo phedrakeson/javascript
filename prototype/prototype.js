@@ -91,3 +91,4 @@ Carro.preco // Number
 Carro.acelerar() // Boolean
 Carro.marca.charAt // function
 Carro.marca.charAt(0) // string
+// verifique o nome do construtor com .constructor.name
