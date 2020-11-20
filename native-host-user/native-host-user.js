@@ -58,3 +58,7 @@ $('a').show();
 // O typeof retorna o tipo de dado. Caso esse dado não exista ou não tenha sido definido, ele irá retornar undefined. Ou seja, quando não for undefined quer dizer que existe.
 if (typeof Array.from !== "undefined");
 if (typeof NodeList !== "undefined");
+
+
+// API
+// Application Programming Interface, é uma interface de software criada para a interação com outros softwares. Ou seja, toda interação que fazemos com o Browser utilizando objetos, métodos e propriedades, estamos na verdade interagindo com a API do browser.
