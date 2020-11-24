@@ -122,4 +122,18 @@ const htmlNovo = htmlArray.join('section');
 // retorna a string  em letras maiúsculas ou minúsculas . Bom para verificarmos input de usuários
 const sexo1 = 'Feminino';
 const sexo2 = 'feminino';
-const sexo3 = 'FEMININO'
+const sexo3 = 'FEMININO';
+
+(sexo1.toLowerCase() === 'feminino'); //true
+(sexo2.toLowerCase() === 'feminino'); //true
+(sexo3.toLowerCase() === 'feminino'); //true
+
+
+// str.trim(), str.trimStart() e str.trimEnd()
+// Remove espaço em branco do início ou final de uma string
+const valor = '  R$ 33.00  ';
+valor.trim(); // 'R$ 33.00'
+valor.trimStart(); // 'R$ 33.00   '
+valor.trimEnd(); // '   R$ 33.00'
+
+
